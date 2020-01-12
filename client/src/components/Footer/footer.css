@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: radial-gradient(circle, rgba(0,0,0,0.923406862745098) 0%, rgba(156,156,156,0.9626225490196079) 100%);
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    color: white;
+}
+p{
+    padding-top: 10px;
+    font-size: 20px
+}
