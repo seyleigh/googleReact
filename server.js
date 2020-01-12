@@ -17,7 +17,7 @@ app.use(routes)
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://user3:password3@ds261648.mlab.com:61648/heroku_lvbx8gh4", {useNewUrlParser: true});
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://user3:password3@ds261648.mlab.com:61648/heroku_lvbx8gh4";
 
 
 mongoose.connect(MONGODB_URI, {
