@@ -3,6 +3,10 @@ import API from "../utils/API";
 import SearchForm from "../components/SearchForm";
 import SearchResult from "../components/SearchResult";
 import { Container, Row, Col } from "../components/Grid";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal)
 
 class SearchBooks extends Component {
     state = {
@@ -43,10 +47,14 @@ class SearchBooks extends Component {
 
     handleSavedButton = e => {
         e.preventDefault();
-        console.log(this.state.books);
         let savedBooks = this.state.books.filter(book => book.id === e.target.id);
         savedBooks = savedBooks[0];
-        API.saveBook(savedBooks).then(this.setState({ message: alert ("Your book is saved" )})).catch(err => console.log(err))
+        API.saveBook(savedBooks).then(this.setState({ message: MySwal.fire({
+            title: <p>Your book has been saved :)</p>,
+            icon: "success",
+            showConfirmButton: false,
+            timer: 1500,
+          })})).catch(err => console.log(err))
     }
 
     render() {
@@ -55,8 +63,7 @@ class SearchBooks extends Component {
                 <Container>
                     <Row>
                         <Col size="12">
-                            <SearchForm 
-                                handleFormSubmit={this.handleFormSubmit}
+                            <SearchForm handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange} />
                         </Col>
                     </Row>

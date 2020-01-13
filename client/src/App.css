@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url("./giammarco-boscaro-zeH-ljawHtg-unsplash.jpg");
+  background-size: cover;
+
 }
 
 .App-logo {
