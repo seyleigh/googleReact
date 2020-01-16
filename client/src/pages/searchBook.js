@@ -6,7 +6,7 @@ import { Container, Row, Col } from "../components/Grid";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
-const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal);
 
 class SearchBooks extends Component {
     state = {
@@ -50,12 +50,13 @@ class SearchBooks extends Component {
         let savedBooks = this.state.books.filter(book => book.id === e.target.id);
         savedBooks = savedBooks[0];
         API.saveBook(savedBooks).then(this.setState({ message: MySwal.fire({
-            title: <p>Your book has been saved :)</p>,
+            title: <p>Your book has been saved.</p>,
             icon: "success",
             showConfirmButton: false,
             timer: 1500,
-          })})).catch(err => console.log(err))
+          }) })).catch(err => console.log(err))
     }
+
 
     render() {
         return(

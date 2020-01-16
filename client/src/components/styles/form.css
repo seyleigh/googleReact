@@ -20,11 +20,6 @@ form{
     border: none;
 }
 
-/* .form-control{
-    margin-left: 20px;
-    width: 96%
-} */
-
 input,  .form-control, .form-control:focus {
     margin-left: 20px;
     width: 96%;

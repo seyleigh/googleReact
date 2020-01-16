@@ -1,5 +1,5 @@
 import React from "react";
-import "./saved.css";
+import "../styles/saved.css";
 import { Row, Col } from "../Grid";
 
 const SavedResult = props => {
@@ -36,14 +36,12 @@ const SavedResult = props => {
                                     </Col>
                                 </Row>
                                 <br />
-                                {/* <Row className="buttonDiv"> */}
                                     <button className="deleteBook btn btn-outline-dark" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
                                     <i className="fas fa-skull"></i>
                                     </button>
                                     <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
                                         <button className="view btn btn-outline-dark"><i className="fab fa-google"></i></button>
                                     </a>
-                                {/* </Row> */}
                             </li>
                         );
                     })}

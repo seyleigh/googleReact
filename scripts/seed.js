@@ -2,9 +2,6 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
-
-
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://user3:password3@ds261648.mlab.com:61648/heroku_lvbx8gh4";
 
 
@@ -25,7 +22,7 @@ const bookSeed = {
 }
 
 db.Book.remove({}).then(() => db.Book.collection.insertMany(bookSeed)).then(data => {
-    console.log(data.result.n + "records inserted");
+    console.log(data.result.n + "added");
     process.exit(0);
 }).catch(err => {
     console.error(err);
