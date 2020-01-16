@@ -1,5 +1,5 @@
 import React from "react";
-import "./search.css";
+import "../styles/search.css";
 import { Row, Col } from "../Grid";
 
 const SearchResult = props => {
@@ -18,8 +18,8 @@ const SearchResult = props => {
                     <h2 className="text-white text-center">Search Results</h2>
                     {props.books.map(book => {
                         return (
-                            <li className="search-list list-group-item">
-                                <Row className="SearchResult row" id={book.title + "Card"} key={book.id}>
+                            <li className="searchList list-group-item">
+                                <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
                                     <Col size="2" className="bookImage">
                                         <img src={book.image} alt={book.title} />
                                     </Col>

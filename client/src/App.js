@@ -1,5 +1,4 @@
 import React from "react";
-// import Footer from "./components/Footer/"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SaveBooks from "./pages/saveBook";
 import NoMatch from "./pages/noMatch";
@@ -18,7 +17,6 @@ function App() {
           <Route exact path="/saved/:id" component={SaveBooks} />
           <Route component={NoMatch} />
         </Switch>
-        {/* <Footer /> */}
       </div>
     </Router>
   )
