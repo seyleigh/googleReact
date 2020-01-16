@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes)
 
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://"", {useNewUrlParser: true});
 
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://user3:password3@ds261648.mlab.com:61648/heroku_lvbx8gh4";
@@ -26,6 +26,12 @@ useNewUrlParser: true
 });
 
 
+
+
+
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
