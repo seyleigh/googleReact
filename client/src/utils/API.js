@@ -14,7 +14,7 @@ export default {
     },
 
     saveBook: savedBooks => {
-        return axios.post("/api/books/", savedBooks);
+        return axios.post("/api/books", savedBooks);
     },
 
     deleteBook: id => {
